@@ -1,0 +1,30 @@
+{
+    "extends": [
+        "airbnb"
+    ],
+    "plugins": [
+        "jest"
+    ],
+    "env": {
+        "jest/globals": true,
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/destructuring-assignment": 0,
+        "prefer-destructuring": 0,
+        "react/prop-types": 0
+    }
+}

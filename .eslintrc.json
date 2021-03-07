@@ -26,5 +26,14 @@
         "react/destructuring-assignment": 0,
         "prefer-destructuring": 0,
         "react/prop-types": 0
-    }
+    },
+    "overrides": [
+        {
+            "files": ["*.stories.*"],
+            "rules": {
+                "import/no-extraneous-dependencies": "off",
+                "react/jsx-props-no-spreading": "off"
+            }
+        }
+    ]
 }

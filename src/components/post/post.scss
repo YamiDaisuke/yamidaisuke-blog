@@ -1,0 +1,15 @@
+@import '../../main.scss';
+
+.tags-container {
+    list-style-type: none;
+
+    .tag {
+        margin: 4px 4px;
+        padding: 0px 4px;
+        @include round-corners(5px);
+        border-color: $color-primary;
+        border-width: 1px;
+        border-style: solid;
+        float: left;
+    }
+}

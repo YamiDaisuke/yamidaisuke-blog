@@ -1,9 +1,14 @@
 @import './milligram/milligram.sass';
 
-$color-primary: #ff0000 !default;
-
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin round-corners($property) {
+    -moz-border-radius: $property;
+    -webkit-border-radius: $property;
+    -o-border-radius: $property;
+    border-radius: $property;
 }

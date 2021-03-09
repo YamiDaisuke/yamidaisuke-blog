@@ -11,5 +11,9 @@
         border-width: 1px;
         border-style: solid;
         float: left;
+        &:hover {
+            background-color: $color-primary;
+            color: white;
+        }
     }
 }

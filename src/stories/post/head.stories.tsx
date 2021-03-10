@@ -3,13 +3,16 @@ import React, { ComponentProps } from 'react';
 import { Story } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import Tags from 'components/post/tags';
+import moment from 'moment';
+
+import Head from 'components/post/head';
 
 export default {
-    title: 'Tags',
-    component: Tags,
+    title: 'Head',
+    component: Head,
     argTypes: {
         tags: { control: 'array' },
+        date: { control: 'date' },
     },
     decorators: [
         (AStory: Story): React.ReactElement => (
@@ -20,12 +23,14 @@ export default {
     ],
 };
 
-const Template: Story<ComponentProps<typeof Tags>> = (args) => (
-    <Tags {...args} />
+const Template: Story<ComponentProps<typeof Head>> = (args) => (
+    <Head {...args} />
 );
 
-export const TagsStory = Template.bind({});
-TagsStory.args = {
+export const HeadStory = Template.bind({});
+HeadStory.args = {
+    title: 'This is a post title',
+    date: moment(),
     tags: ['blog', 'swift', 'code', 'life'],
     onTagClicked: action('onTagClicked'),
 };

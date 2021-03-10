@@ -46,7 +46,7 @@ function Tags({ tags, onTagClicked }: TagsProps): React.ReactElement {
         }
     );
 
-    return <div className="tags-container">{tagsElements}</div>;
+    return <ul className="tags-container">{tagsElements}</ul>;
 }
 
 Tags.defaultProps = {

@@ -2,7 +2,7 @@
 
 .tags-container {
     list-style-type: none;
-
+    overflow: hidden;
     .tag {
         margin: 4px 4px;
         padding: 0px 4px;
@@ -15,5 +15,11 @@
             background-color: $color-primary;
             color: white;
         }
+    }
+}
+
+.head {
+    .date {
+        font-style: italic;
     }
 }

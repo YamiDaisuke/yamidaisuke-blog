@@ -10,6 +10,7 @@
     "@types/node": "^14.14.32",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.1",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
@@ -27,11 +28,13 @@
     "@storybook/react": "^6.1.21",
     "css-loader": "^5.1.1",
     "eslint-config-airbnb-typescript-prettier": "^4.1.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^24.1.7",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "node-sass": "^5.0.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.2.1",
     "react-test-renderer": "^16.8.6",
     "sass": "^1.32.8",
@@ -42,6 +45,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:nowatch": "yarn test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint -f table --ext=.jsx,.js,.tsx,.ts  ./src/.",
     "storybook": "start-storybook -p 6006 -s public",
@@ -58,5 +62,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "test:nowatch"
+  ]
 }

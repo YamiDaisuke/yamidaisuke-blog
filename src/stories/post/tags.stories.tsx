@@ -11,13 +11,6 @@ export default {
     argTypes: {
         tags: { control: 'array' },
     },
-    decorators: [
-        (AStory: Story): React.ReactElement => (
-            <div style={{ margin: '3em' }}>
-                <AStory />
-            </div>
-        ),
-    ],
 };
 
 const Template: Story<ComponentProps<typeof Tags>> = (args) => (

@@ -14,13 +14,6 @@ export default {
         tags: { control: 'array' },
         date: { control: 'date' },
     },
-    decorators: [
-        (AStory: Story): React.ReactElement => (
-            <div style={{ margin: '3em' }}>
-                <AStory />
-            </div>
-        ),
-    ],
 };
 
 const Template: Story<ComponentProps<typeof Head>> = (args) => (

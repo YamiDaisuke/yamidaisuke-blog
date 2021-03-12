@@ -1,14 +1,16 @@
 import React from 'react';
-import './App.scss';
+
+import Post from 'components/post/post';
+import { home } from 'data/posts';
 
 function App(): React.ReactElement {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <p>Hello!</p>
-            </header>
-        </div>
+    const postsElements = home.map(
+        (p): React.ReactElement => {
+            return <Post post={p} />;
+        }
     );
+
+    return <div className="container">{postsElements}</div>;
 }
 
 export default App;

@@ -35,3 +35,49 @@ test('Renders a blog post', () => {
     const h2 = container.querySelector('h2');
     expect(h2).toBeInTheDocument();
 });
+
+test('Renders a blog post without publish date', () => {
+    const post: PostModel = {
+        title: 'My Test Post',
+        createDate: moment('1988-09-12T15:10:00.000Z').utc(),
+        tags: ['tag1', 'tag2', 'tag3'],
+        status: 'published',
+        body: `
+        <p>paragraph</p>
+        <p><strong>bold</strong</b></p>
+        <h2>Title</h2>
+        `,
+    };
+
+    render(<Post post={post} />);
+    const titleElement = screen.getByText(post.title);
+    expect(titleElement).toBeInTheDocument();
+
+    // Date element should have publish date
+    const dateElement = screen.getByText('12-09-1988 15:10');
+    expect(dateElement).toBeInTheDocument();
+});
+
+test('Renders a blog post without last edit date', () => {
+    const post: PostModel = {
+        title: 'My Test Post',
+        createDate: moment('1988-09-12T15:10:00.000Z').utc(),
+        publishDate: moment('2020-09-12T15:10:00.000Z').utc(),
+        lastEdited: moment('2020-09-14T15:10:00.000Z').utc(),
+        tags: ['tag1', 'tag2', 'tag3'],
+        status: 'published',
+        body: `
+        <p>paragraph</p>
+        <p><strong>bold</strong</b></p>
+        <h2>Title</h2>
+        `,
+    };
+
+    render(<Post post={post} />);
+    const titleElement = screen.getByText(post.title);
+    expect(titleElement).toBeInTheDocument();
+
+    // Date element should have publish date
+    const dateElement = screen.getByText('14-09-2020 15:10');
+    expect(dateElement).toBeInTheDocument();
+});

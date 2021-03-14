@@ -12,6 +12,8 @@ interface PostModel {
     createDate: moment.Moment | Date;
     /** When this blog changed from status 'draft' to 'published' */
     publishDate?: moment.Moment | Date;
+    /** When was this post last modified */
+    lastEdited?: moment.Moment | Date;
     /** The post body ready to display */
     body: string;
     /** The current post status */

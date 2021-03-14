@@ -11,6 +11,7 @@ const home: Array<PostModel> = [
         title: 'Welcome!',
         tags: ['life'],
         createDate: moment('2021-03-12T15:00:00-03:00'),
+        lastEdited: moment('2021-03-14T16:35:00-03:00'),
         status: 'published',
         body: `
         <p>
@@ -29,7 +30,12 @@ const home: Array<PostModel> = [
         will be a good way for me to explore areas outside my comfort zone and my fulltime
         job.
         </p>
-
+        <p>
+        Is not that I think I can do better than all other great solutions out there
+        is just I want to learn about how this solution solve the problems and I believe
+        the best way to learn is by facing the same problems and work out a solution of my
+        own.
+        </p>
         <p>
         So I have started this project and will continue to work on my other ideas, which
         I'll be describing in another post, later on. But for all of these projects I will
@@ -45,8 +51,11 @@ const home: Array<PostModel> = [
         </ul>
 
         <p>
-        Aside from the personal projects, I'll be working I'll look for opportunities to
-        contribute to some open-source projects.
+        Finally aside from the personal projects, I'll be developing to learn I'll look for
+        opportunities to contribute to some open-source projects. I've been a develop
+        for quite a while now and I never made the time to get involved in open source
+        projects, so I'll look into some small contributions to get the hang of it and work
+        my way up from there!.
         </p>
 
         <h6>

@@ -17,7 +17,7 @@ function Post({ post }: PostProps): React.ReactElement {
             <Head
                 title={post.title}
                 tags={post.tags}
-                date={post.publishDate || post.createDate}
+                date={post.lastEdited || post.publishDate || post.createDate}
             />
             <div
                 className="body"

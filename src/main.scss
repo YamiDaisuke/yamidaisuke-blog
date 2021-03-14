@@ -1,5 +1,7 @@
 @import './milligram/milligram.sass';
 
+$color-background: #fff !default;
+
 body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -13,6 +15,15 @@ body {
     border-radius: $property;
 }
 
-#root {
+.container {
+    margin-top: 8rem;
     margin: 3em;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

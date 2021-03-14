@@ -1,0 +1,32 @@
+@import '../../main.scss';
+
+.navbar {
+    height: 8rem;
+    width: 100%;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-background;
+    z-index: 2;
+    border-bottom: 1px solid $color-tertiary;
+    .title {
+        line-height: 4rem;
+        display: inline;
+        float: left;
+        padding-left: 0.8rem;
+        font-size: 2.5rem;
+    }
+    .icon {
+        height: 4rem;
+        float: left;
+        color: $color-primary;
+        font-size: 2.5rem;
+    }
+    .link {
+        height: 4rem;
+        float: right;
+        margin-left: 0.8rem;
+    }
+}
